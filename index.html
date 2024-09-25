@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MG Fire Services</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="logo.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html">
+                <img src="logo.jpg" alt="MG Fire Services Logo" class="logo">
+            </a>
+
+            <div class="tagline">
+                <p>Deals in Fire & Safety Equipment</p>
+            </div>
+        
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact" id="contactUsBtn">Contact Us</a></li>
+                </ul>
+            </nav>
+            
+            <div class="contact-info">
+                <div class="info-item">
+                    <a href="tel:+918600885040" class="mobile-number"><img src="https://img.icons8.com/material-outlined/24/ffffff/phone.png" alt="Call Icon" style="vertical-align: middle; margin-right: 5px;">
+                        +91 8600885040
+                    </a>
+                </div>
+                <div class="info-item">
+                    <a href="mailto:mgfireservices01@gmail.com" class="email-id"><img src="https://img.icons8.com/material-outlined/24/ffffff/email.png" alt="Email Icon" style="vertical-align: middle; margin-right: 5px;">
+                        mgfireservices01@gmail.com  
+                    </a>
+                </div>
+            </div>   
+        </div>
+            
+    </header>
+
+
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            
+            <!-- Installation Service -->
+            <div class="service-box">
+                <img src="installation.jpeg" alt="Installation" class="service-icon">
+                <h3>Installation</h3>
+                <p>We provide expert installation services for all your fire safety needs, ensuring compliance and safety standards.</p>
+                <a href="installation.html" class="read-more">Read More ></a>
+            </div>
+            
+            <!-- Consultation Service -->
+            <div class="service-box">
+                <img src="consultation.jpeg" alt="Consultation" class="service-icon">
+                <h3>Consultation</h3>
+                <p>Our consultation services offer professional advice to optimize your fire safety measures and ensure maximum protection.</p>
+                <a href="consultation.html" class="read-more">Read More ></a>
+            </div>
+            
+            <!-- Maintenance Service -->
+            <div class="service-box">
+                <img src="maintenance.png" alt="Maintenance" class="service-icon">
+                <h3>Maintenance</h3>
+                <p>We provide ongoing maintenance services to keep your fire safety systems operational and compliant with regulations.</p>
+                <a href="maintenance.html" class="read-more">Read More ></a>
+            </div>
+            
+        </div>
+    </section>
+
+<!-- Quote Request Popup -->
+<div id="quotePopup" class="popup">
+    <div class="popup-content">
+        <span class="close-quote-popup close-popup">&times;</span>
+        <h2>Request a Quote</h2>
+        <div class="popup-product-info">
+            <img id="quote-product-image" src="" alt="Product Image" class="popup-product-image">
+            <div class="product-details">
+                <label for="quote-product-name">Product Name</label>
+                <input type="text" id="quote-product-name" name="product-name" readonly>
+            </div>
+        </div>
+        <form id="quoteForm" method="POST" action="https://formspree.io/f/xpwaykoq">
+            <div class="form-row">
+                <label for="quote-quantity">Quantity</label>
+                <input type="number" id="quote-quantity" name="quantity" required>
+            </div>
+            <div class="form-row">
+                <label for="quote-name">Name</label>
+                <input type="text" id="quote-name" name="name" required>
+            </div>
+            <div class="form-row">
+                <label for="quote-email">Email</label>
+                <input type="email" id="quote-email" name="email" required>
+            </div>
+            <div class="form-row">
+                <label for="quote-city">City</label>
+                <input type="text" id="quote-city" name="city" required>
+            </div>
+            <div class="form-row">
+                <label for="quote-phone">Mobile Number</label>
+                <input type="tel" id="quote-phone" name="phone" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+<section id="products">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+        <div class="product-item" data-product-name="Fire Extinguishers">
+            <img src="products/Fire-Extinguishers.jpg" alt="Fire Extinguishers">
+            <p>Fire Extinguishers</p>
+            <button class="get-quote-btn">GET A QUOTE</button>
+        </div>
+        <div class="product-item" data-product-name="Fire Alarm and Detection Systems">
+            <img src="products/Alarm-Detection.jpg" alt="Fire Alarm and Detection Systems">
+            <p>Fire Alarm and Detection Systems</p>
+            <button class="get-quote-btn">GET A QUOTE</button>
+        </div>
+        <div class="product-item" data-product-name="Flame Detector">
+            <img src="products/Flame-Detector.jpg" alt="Flame Detector">
+            <p>Flame Detector</p>
+            <button class="get-quote-btn">GET A QUOTE</button>
+        </div>
+        <div class="product-item" data-product-name="Manual Call Point">
+            <img src="products/Manual-Call-Point.jpg" alt="Manual Call Point">
+            <p>Manual Call Point</p>
+            <button class="get-quote-btn">GET A QUOTE</button>
+        </div>
+        <div class="product-item" data-product-name="Fire Bucket">
+            <img src="products/Fire-Bucket.jpg" alt="Fire Bucket">
+            <p>Fire Bucket</p>
+            <button class="get-quote-btn">GET A QUOTE</button>
+        </div>
+        <div class="product-item" data-product-name="Fire Hose Reel">
+            <img src="products/fire-hose-reel.jpg" alt="Fire Hose Reel">
+            <p>Fire Hose Reel</p>
+            <button class="get-quote-btn">GET A QUOTE</button>
+        </div>
+        <div class="product-item" data-product-name="Fire Alarm Systems">
+            <img src="products/Fire-Alarm-System.jpg.webp" alt="Fire Alarm Systems">
+            <p>Fire Alarm Systems</p>
+            <button class="get-quote-btn">GET A QUOTE</button>
+        </div>
+        <div class="product-item" data-product-name="Fire Hydrant Accessories">
+            <img src="products/fire-hydrant-system.jpg" alt="Fire Hydrant Accessories">
+            <p>Fire Hydrant Accessories</p>
+            <button class="get-quote-btn">GET A QUOTE</button>
+        </div>
+        <div class="product-item" data-product-name="Fire Water Monitor">
+            <img src="products/water-monitor.jpg" alt="Fire Water Monitor">
+            <p>Fire Water Monitor</p>
+            <button class="get-quote-btn">GET A QUOTE</button>
+        </div>
+    </div>
+</section>
+
+  
+<section id="about">
+    <h2>About Us</h2>
+    <p>
+        Welcome to <strong>MG Fire Services</strong>, your trusted partner in fire safety and protection. With over a decade of experience, we specialize in delivering end-to-end solutions for fire prevention, detection, suppression, and emergency response. Our services span across a wide range of industries, ensuring tailored fire protection for businesses, residential complexes, and public institutions.
+    </p>
+    <p>
+        At <strong>MG Fire Services</strong>, our mission is clear: to protect lives, property, and assets through cutting-edge technology, world-class expertise, and an unwavering commitment to safety. We offer comprehensive services that include the installation of fire alarm systems, sprinkler systems, suppression systems, emergency lighting, and ongoing maintenance to ensure your safety systems are always operational and compliant.
+    </p>
+    <p>
+        We take pride in our team of certified professionals who bring a wealth of knowledge and experience to every project. Our promise to you is reliability, adherence to safety regulations, and a customized approach that meets your specific needs.
+    </p>
+    <p>
+        Our commitment goes beyond just products and services—we’re passionate about creating safe environments. With MG Fire Services, you are not only investing in fire safety, but also gaining a dedicated partner in risk management and protection.
+    </p>
+
+    <!-- Visiting Card Images -->
+    <div class="visiting-card-images">
+        <img src="tag1.jpg" alt="Visiting Card Front" class="card-image">
+        <img src="tag2.jpg" alt="Visiting Card Back" class="card-image">
+    </div>
+</section>
+
+
+<div id="contactPopup" style="display: none;">
+    <div class="contact-popup-content">
+        <span class="close-quote-popup close-popup">&times;</span>
+        <h2>Contact Us</h2>
+        <form id="contactForm" method="POST" action="https://formspree.io/f/xpwaykoq">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Mobile Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label>Purpose</label>
+            <label><input type="radio" name="purpose" value="Sale Enquiry" required> Sale Enquiry</label>
+            <label><input type="radio" name="purpose" value="Product Purchase"> Product Purchase</label>
+            <label><input type="radio" name="purpose" value="Other"> Other</label>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+<div id="contactIcon" class="contact-icon">
+    &#9993; <!-- Email icon -->
+</div>
+
+
+<footer>
+    <div class="footer-content">
+        <!-- Footer Links -->
+        <div class="footer-links">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="installation.html">Installation</a></li>
+                    <li><a href="consultation.html">Consultation</a></li>
+                    <li><a href="maintenance.html">Maintenance</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p><strong>Email:</strong> <a href="mailto:mgfireservices01@gmail.com">mgfireservices01@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+91 8600885040">+91 8600885040</a></p>
+            <p><strong>Address:</strong> Nagpur - 440034</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 MG Fire Services. All rights reserved.</p>
+    </div>
+</footer>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

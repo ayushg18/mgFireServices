@@ -1,0 +1,1191 @@
+/* Adjust the offset for scrolling */
+section {
+    scroll-margin-top: 100px; /* Set this according to your header height */
+}
+
+@media (max-width: 768px) {
+    /* For smaller screens if header height changes */
+    section {
+        scroll-margin-top: 80px;
+    }
+}
+
+
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Space between the two fields */
+    margin-bottom: 15px; /* Space between rows */
+}
+
+.form-group {
+    flex: 1; /* Each field takes equal width */
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* Quote Popup Styles */
+/* Quote Popup Styles */
+#quotePopup {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    position: relative; 
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px; /* Smaller width for a more compact design */
+    max-width: 90%; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.popup-content h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #e63946;
+}
+
+.popup-product-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.popup-product-image {
+    width: 100px; /* Increased width for a larger image */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 15px;
+}
+
+.product-details {
+    flex-grow: 1; /* Allow this div to take up remaining space */
+}
+
+.product-details label {
+    font-weight: bold;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.form-row label {
+    flex: 1;
+    margin-right: 10px; /* Space between label and input */
+}
+
+.form-row input {
+    flex: 2; /* Allow input to take more space */
+}
+
+.popup-content button {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #e63946;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-content button:hover {
+    background-color: #cc2e3e;
+}
+
+/* Close button styles */
+.close-quote-popup {
+    position: absolute; 
+    top: 10px; 
+    right: 15px;
+    font-size: 28px;
+    color: #fff; 
+    background-color: #e63946; 
+    border-radius: 50%; 
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center; 
+    cursor: pointer;
+    z-index: 1001; 
+}
+
+
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    padding-top: 100px; /* To prevent content from being hidden under the fixed header */
+}
+/* Header Styling */
+header {
+    background-color: #f4f3f3;
+    padding: 5px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(125, 92, 92, 0.2);
+}
+
+/* Header container layout */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between logo and contact info */
+    padding: 10px 20px;
+    background-color: #fbfbfb;
+}
+
+/* Logo styling */
+.header-container a img.logo {
+    width: 100px;
+    height: auto;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s ease;
+}
+
+/* Contact Info Styling */
+.contact-info {
+    background-color: #4d39e3; /* Background for contrast */
+    padding: 5px 15px;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    color: #000000;
+}
+
+.email-id {
+    color: #ffffff; /* White text for email */
+    font-size: 16px; /* Set font size to 15px */
+    text-decoration: none; /* Remove underline */
+}
+
+.email-id:hover {
+    color: #e63946; /* Change color on hover */
+    text-decoration: underline; /* Optional underline on hover */
+}
+
+
+/* Mobile Number Styling */
+.mobile-number {
+    font-size: 18px;
+    color: #fff; /* White text for visibility */
+    font-weight: bold;
+    margin: 0;
+    text-align: right;
+}
+
+
+/* Optional: Change border color on hover */
+.logo img:hover {
+    border-color: #fa4242; /* Change to your desired highlight color */
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center; /* Center the nav items */
+    flex-grow: 1; /* Allow the nav to take up remaining space */
+}
+
+nav ul li {
+    margin: 0 12px; /* Add horizontal spacing between items */
+}
+
+nav ul li a {
+    color: #fa4242;
+    text-decoration: none;
+    font-size: 20px; /* Slightly larger text */
+    padding: 10px 15px; /* Adjust padding for better spacing */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease; /* Add color transition */
+}
+
+/* Hover Effect for Buttons */
+nav ul li a:hover {
+    background-color: #e74c3c;
+    color: #ffffff; /* Change text color on hover */
+    transform: scale(1.05);
+}
+
+
+/* Tagline Image (Optional styling for better alignment) */
+.tagline {
+    display: inline-flex; /* Keep it inline to avoid breaking layout */
+    justify-content: center;
+    align-items: center;
+    background-color: #f57c00; /* Bold background color */
+    color: #fff; /* Text color for contrast */
+    padding: 10px 20px; /* Add some padding */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    margin: 0 auto; /* Center the tagline */
+}
+
+.tagline p {
+    margin: 0;
+    font-size: 24px; /* Larger font for emphasis */
+    font-weight: bold; /* Bold text */
+    padding: 0; /* Remove any padding */
+    display: inline-block; /* Ensure text is inline */
+}
+
+.tagline img {
+    max-width: 400px;
+    height: auto;
+    display: inline-block;
+    margin: 0 10px; /* Add space between the images */
+    border-radius: 8px;
+}
+
+
+#services {
+    text-align: center;
+    padding: 50px 20px;
+    background-image: url('fire-alarm.jpg'); /* Path to your background image */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    padding: 50px 20px; /* Adds some padding for content spacing */
+    color: white; /* Optional: Adjust text color to contrast with the background image */
+    text-align: center; /* Center-align the content */
+}
+
+
+
+#services h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #e8e8e8;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center; /* Center the container within the section */
+    align-items: flex-start;
+    gap: 50px; /* Reduced spacing between the boxes */
+    margin: 0 auto; /* Center the entire container */
+    max-width: 1000px; /* Adjust the width as needed */
+    padding: 0 20px; /* Add padding to keep away from the borders */
+}
+
+.service-box {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1 1 calc(33.333% - 10px); /* Ensure each box takes up equal space */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-icon {
+    width: 70px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.service-box h3 {
+    font-size: 24px;
+    color: #e63946;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    color: #e63946;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Common popup styles */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+/* Popup content */
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 500px; /* Max width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Close button */
+.close-popup {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-popup:hover,
+.close-popup:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+#products {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+#products h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.product-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-item img {
+    width: 150px; /* Set the desired width */
+    height: 150px; /* Set the desired height */
+    object-fit: cover; /* Ensures the image fits within the set dimensions */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-item p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+#about h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+/* Contact Form Popup Styles */
+#contactPopup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Darker overlay */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.contact-popup-content {
+    background: linear-gradient(145deg, #ffffff, #e8e8e8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    width: 450px;
+    max-width: 90%;
+    text-align: center;
+    position: relative;
+    animation: slideIn 0.4s ease-out;
+}
+
+.contact-popup-content h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+.contact-popup-content label {
+    display: block;
+    margin-bottom: 8px;
+    text-align: left;
+    font-weight: 600;
+    color: #666;
+}
+
+.contact-popup-content input[type="text"],
+.contact-popup-content input[type="email"],
+.contact-popup-content input[type="tel"],
+.contact-popup-content textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f4f4f4;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-popup-content input[type="text"]:focus,
+.contact-popup-content input[type="email"]:focus,
+.contact-popup-content input[type="tel"]:focus,
+.contact-popup-content textarea:focus {
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+.contact-popup-content textarea {
+    height: 120px;
+    resize: none;
+}
+
+.contact-popup-content button[type="submit"] {
+    background: linear-gradient(145deg, #e74c3c, #c0392b);
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-popup-content button[type="submit"]:hover {
+    background: linear-gradient(145deg, #c0392b, #e74c3c);
+    transform: translateY(-3px);
+}
+
+.contact-popup-content button[type="submit"]:active {
+    transform: translateY(1px);
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-popup:hover {
+    color: #333;
+}
+
+.contact-icon {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(145deg, #e74c3c, #c0392b);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact-icon img {
+    width: 28px;
+    height: 28px;
+    filter: invert(1);
+}
+
+.contact-icon:hover {
+    background: linear-gradient(145deg, #c0392b, #e74c3c);
+    transform: scale(1.1);
+}
+
+/* Animation for Popup */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Footer CSS */
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+}
+
+.footer-section {
+    margin-right: 40px;
+}
+
+.footer-section h3 {
+    color: #e63946;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #e63946;
+}
+
+.footer-contact {
+    width: 30%;
+}
+
+.footer-contact p {
+    margin-bottom: 10px;
+}
+
+.footer-contact strong {
+    font-weight: bold;
+}
+
+.footer-contact a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+    color: #e63946;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #bbb;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-section {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .footer-contact {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Installtion CSS */
+/* Hero Section */
+.hero {
+    background: url('fire_hero.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    background: rgba(220, 50, 50, 0.954);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+/* Content Sections */
+section.content,
+section.components,
+section.process {
+    padding: 30px;
+    background-color: #fff;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.content h2,
+section.components h2,
+section.process h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #e63946;
+}
+
+section.content p,
+section.components ul li,
+section.process ol li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* Image styling for content and components sections */
+.content .content-image img,
+.components .components-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content .content-image {
+    margin-left: 20px;
+}
+
+.components .components-image {
+    margin-right: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    section.content,
+    section.components {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content .content-image,
+    .components .components-image {
+        margin: 20px 0;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+.content-image img {
+    width: 100%;
+    max-width: 300px; /* Adjusted size for a smaller image */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content-image {
+    margin-left: 20px; /* Keep margin to the left of the image */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Consultation CSS */
+
+/* Redesigned Styles with Images */
+.content-wrapper, .process-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Text Block */
+.text-block, .list-block {
+    flex: 1;
+    padding: 10px;
+}
+
+.text-block h2 {
+    color: #e63946;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.text-block p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.list-block ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.list-block ul li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    padding-left: 25px;
+    position: relative;
+}
+
+.list-block ul li::before {
+    content: "\2022";
+    color: #e63946;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    position: absolute;
+    left: 0;
+}
+
+.list-block strong {
+    color: #e63946;
+}
+
+/* Image Block */
+.image-block {
+    flex: 0.8;
+    text-align: center;
+    padding: 10px;
+}
+
+.responsive-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Process Section */
+.process {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+/* Process Wrapper */
+.process-wrapper {
+    display: flex;
+    justify-content: space-between; /* Space out the items */
+    align-items: flex-start; /* Align items to the start */
+    max-width: 1200px; /* Maximum width of the container */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Text Block */
+.text-block {
+    flex: 1; /* Allow the text block to take available space */
+    max-width: 400px; /* Set a max width for the text block */
+}
+
+/* Centered Image Block */
+.image-block {
+    flex: 0 0 40%; /* Set a fixed size for the image block, e.g., 40% of parent */
+    text-align: center; /* Center the image */
+    margin: 0 20px; /* Add horizontal margin for spacing */
+}
+
+.responsive-img {
+    max-width: 100%; /* Ensure the image does not exceed its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Adds a subtle rounded corner to images */
+}
+
+/* Process Steps */
+.process-steps {
+    flex: 1; /* Allow the process steps to take available space */
+    max-width: 400px; /* Set a max width for the steps block */
+}
+
+.process-steps ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+.process-steps ul li {
+    margin-bottom: 10px; /* Spacing between list items */
+    line-height: 1.5; /* Improve line spacing */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .process-wrapper {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items */
+    }
+
+    .text-block, .process-steps, .image-block {
+        max-width: 100%; /* Allow full width on small screens */
+        text-align: center; /* Center text on small screens */
+    }
+
+    .image-block {
+        flex: 1; /* Allow image block to take available space */
+    }
+}
+
+
+
+
+
+
+/* Maintenance CSS */
+
+/* Fire Safety Maintenance Services Section */
+.maintenance-section {
+    padding: 50px 0;
+    background-color: #f4f4f9;
+    text-align: center;
+}
+
+.maintenance-section h3 {
+    font-size: 2.2rem;
+    color: #d32f2f;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.maintenance-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.maintenance-item {
+    background-color: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+.maintenance-item:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.maintenance-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.maintenance-item h4 {
+    font-size: 1.4rem;
+    color: #333333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.maintenance-item p {
+    font-size: 1rem;
+    color: #555555;
+    line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .maintenance-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .maintenance-item {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
+
+/* About US */
+
+
+/* About Us Section */
+#about {
+    padding: 50px;
+    background-color: #f9f9f9;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    color: #e63946;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: justify;
+}
+
+#about strong {
+    color: #e63946;
+}
+
+/* Visiting Card Images */
+.visiting-card-images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.card-image {
+    width: 48%; /* Makes both images take up 48% of the space each, leaving space between them */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #about {
+        padding: 30px;
+    }
+
+    #about h2 {
+        font-size: 2rem;
+    }
+
+    #about p {
+        font-size: 1.1rem;
+    }
+
+    .visiting-card-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-image {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #about {
+        padding: 20px;
+    }
+
+    #about h2 {
+        font-size: 1.8rem;
+    }
+
+    #about p {
+        font-size: 1rem;
+    }
+
+    .card-image {
+        width: 100%;
+    }
+}
